@@ -3,7 +3,7 @@ services:
     image: baytout4/win
     container_name: windows
     environment:
-      VERSION: "11"
+      VERSION: "10"
     devices:
       - /dev/kvm
       - /dev/net/tun
