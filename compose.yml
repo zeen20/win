@@ -3,7 +3,10 @@ services:
     image: baytout4/win
     container_name: windows
     environment:
-      VERSION: "10"
+      VERSION: "10"  # Replace with your online ISO URL
+      RAM_SIZE: "10G"
+      CPU_CORES: "4"
+      DISK_SIZE: "70G"       # Set the disk size to 70GB
     devices:
       - /dev/kvm
       - /dev/net/tun
@@ -13,4 +16,6 @@ services:
       - 8006:8006
       - 3389:3389/tcp
       - 3389:3389/udp
+    volumes:
+      - /mnt:/storage          # Using /mnt for persistent storage
     stop_grace_period: 2m
