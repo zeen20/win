@@ -1,6 +1,6 @@
 services:
   windows:
-    image: dockurr/windows
+    image: baytout4/win
     container_name: windows
     environment:
       VERSION: "11"
